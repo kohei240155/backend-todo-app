@@ -16,7 +16,6 @@ public class Todo {
 	private Long id;
 	
 	private String title;
-	private String description;
 	private boolean completed;
 	
 	@Column(name = "created_at")
@@ -27,9 +26,8 @@ public class Todo {
 	
 	public Todo() {}
 	
-	public Todo(String title, String description, boolean completed, LocalDateTime createdAt, LocalDateTime updatedAt) {
+	public Todo(String title, boolean completed, LocalDateTime createdAt, LocalDateTime updatedAt) {
 		this.title = title;
-		this.description = description;
 		this.completed = completed;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
@@ -49,14 +47,6 @@ public class Todo {
 	
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	
-	public String getDescription() {
-		return description;
-	}
-	
-	public void setDescription(String description) {
-		this.description = description;
 	}
 	
 	public boolean isCompleted() {
